@@ -7,11 +7,9 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public GameObject root;
     public float speed;
-    public float HP;
     void Start()
     {
         speed=1f;
-        HP=100f;
     }
 
     // Update is called once per frame
@@ -37,14 +35,6 @@ public class Enemy : MonoBehaviour
                 }
                 else{
                     speed=1f;        
-                }
-            }else
-            if(result.gameObject.TryGetComponent<bullet>(out bullet bul)){
-
-                Destroy(result.gameObject);
-                HP-=5f;
-                if(HP<0f){
-                    Destroy(gameObject);
                 }
             }
         }
