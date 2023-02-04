@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Elves : MonoBehaviour
 {
-
     // Start is called before the first frame update
     public GameObject target;
     public GameObject enemyTarget;
@@ -113,11 +112,5 @@ public class Elves : MonoBehaviour
         {
             detectEnemy = false;
         }
-        */
-
     }
-
-
 }
-
-
