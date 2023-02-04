@@ -1,70 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1724365379783934831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1168478418886712599}
-  - component: {fileID: 4292516284744774519}
-  - component: {fileID: 5976444606825917592}
-  m_Layer: 0
-  m_Name: range
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1168478418886712599
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724365379783934831}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5668641078752963612}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &4292516284744774519
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724365379783934831}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 15
---- !u!114 &5976444606825917592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724365379783934831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6446bc853069182488cfb83d21724d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
-  bullet: {fileID: 3472111056086764557, guid: cb56cef7ccdcd594e897e1fcbd0a1feb, type: 3}
-  fireRate: 0.5
-  targetEnemy: {fileID: 0}
 --- !u!1 &5668641078752963613
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,8 +30,7 @@ Transform:
   m_LocalPosition: {x: -0.0119999945, y: -0.024999976, z: 0}
   m_LocalScale: {x: 0.07027105, y: 0.14414577, z: 0.14414577}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1168478418886712599}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,4 +127,3 @@ MonoBehaviour:
   target: {fileID: 0}
   node: {fileID: 0}
   speed: 0
-  Level: 0000000003000000090000001b00000051000000f3000000d90200008b080000a1190000e34c0000
