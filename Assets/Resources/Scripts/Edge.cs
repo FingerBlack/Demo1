@@ -28,7 +28,7 @@ public class Edge : MonoBehaviour
     {       
         //Sprite.color=new Color(1f-(guidline)/10f,1f-(guidline)/10f,1f-(guidline)/10f,255f);
         Light2D=transform.GetChild(1).GetComponent<UnityEngine.Rendering.Universal.Light2D>();
-        Light2D.intensity = guidline/10f;
+        Light2D.intensity = guidline/5f;
         GetComponent<SpriteRenderer>().color=new Color(1f,HP/255f,HP/255f,1f);
         // TimeCount++;
         // if(TimeCount>TimePierod){
