@@ -25,7 +25,7 @@ public class ElvesSpawn : MonoBehaviour
         
         if(TimeCount>TimePeirod){
             GameObject Elves=GameObject.Find("/Roots/Elves");
-            if(Elves.transform.childCount>50){
+            if(Elves.transform.childCount>30){
                 return;
             }
             GameObject obj=Instantiate(elf, transform.position, Quaternion.identity,Elves.transform) as GameObject;
