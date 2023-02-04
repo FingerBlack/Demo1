@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Elves : MonoBehaviour
 {
-
     // Start is called before the first frame update
     public GameObject target;
     public Node node;
     public float speed;
     public List<int> Level = new List<int>{ 0, 3, 9,27,81,243,729,2187,6561,19683};
-
 
     void Start()
     {
@@ -58,25 +56,5 @@ public class Elves : MonoBehaviour
                 }
             }
         }
-        /*// shooing
-        Vector2 targetPos = targetEnemy.position;
-        shootingDirection = targetPos - (Vector2)transform.position;
-        RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, shootingDirection, range);
-
-        if(rayInfo.collider.gameObject.tag == "Enemy")
-        {
-            Debug.Log("detected");
-            detectEnemy = true;
-        }
-        else
-        {
-            detectEnemy = false;
-        }
-        */
-
     }
-
-
 }
-
-
