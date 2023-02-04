@@ -42,15 +42,15 @@ public class elfShooting : MonoBehaviour
             }
         }
     }
-    public void OnCollisionEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
-        {
-            if (targetEnemy == null)
-            {
-                targetEnemy = enemy;
-                return;
-            }
-        }
-    }
+    // public void OnTriggerEnter2D(Collider2D collider)
+    // {
+    //     if (collider.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
+    //     {
+    //         if (targetEnemy == null)
+    //         {
+    //             targetEnemy = enemy;
+    //             return;
+    //         }
+    //     }
+    // }
 }
