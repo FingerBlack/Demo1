@@ -125,5 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  enemyTarget: {fileID: 0}
   node: {fileID: 0}
   speed: 0
+  Level: 0000000003000000090000001b00000051000000f3000000d90200008b080000a1190000e34c0000
+  bullet: {fileID: 3472111056086764557, guid: d809803e1d0b7314c89a218eb19727d9, type: 3}
+  fireRate: 2

@@ -61,7 +61,7 @@ public class Node : MonoBehaviour
                 GameObject child = GameObject.Instantiate(children, transform.position+new Vector3(0,0,-1),Quaternion.Euler(0, 0, roots[element]+transform.eulerAngles.z+Random.Range(-10f,10f)),transform) as GameObject;//transform.localPosition父亲坐标系
                 RootGrowup rootGrowup =GameObject.Find("Roots").GetComponent<RootGrowup>();
                 rootGrowup.Total+=1;
-                UnityEngine.Rendering.Universal.Light2D light2d=GameObject.Find("Roots/Light2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+                UnityEngine.Rendering.Universal.Light2D light2d=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>();
                 float dis=Vector3.Distance(child.transform.position,GameObject.Find("Roots").transform.position);
                 
                 Neighbors.Add(child);
