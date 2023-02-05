@@ -9,16 +9,21 @@ public class Resource : MonoBehaviour
     public GameObject root;
     public float speed;
     public bool flag;
+    public float TimeCount=0;
+    public float Timeperiod;
     void Start()
     {
         flag=false;
         speed=1f;
+        Timeperiod=30f;
         root=GameObject.Find("/Roots/Root");
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
         if(flag){
             
             float dis=Vector3.Distance(transform.position,target.transform.position);
@@ -32,6 +37,10 @@ public class Resource : MonoBehaviour
                 Destroy(gameObject);
             }
         }else{
+            TimeCount+=Time.deltaTime;
+            if(TimeCount>=Timeperiod){
+                Destroy(gameObject);
+            }
             ContactFilter2D filter = new ContactFilter2D().NoFilter();
             List<Collider2D> results = new List<Collider2D>();
             Physics2D.OverlapCircle(transform.position, 0.01f,filter,results);
