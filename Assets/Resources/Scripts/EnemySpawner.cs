@@ -35,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
     {
 
         lowBound=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius+2f;
-        while (GameObject.Find("Enemies").transform.childCount<3&&level<5)
+        while (GameObject.Find("Enemies").transform.childCount<3&&level<=5)
         {
             // spawn n obj per hollow
             numPerSpawn=NumberLevels[level];
