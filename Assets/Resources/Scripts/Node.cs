@@ -8,6 +8,7 @@ public class Node : MonoBehaviour
     public List<GameObject> Neighbors;
     public float total;
     public int resourceslimit;
+    public int currentNodeamount = 0;
     // int[] nums = new int[] 
     public List<int> roots = new List<int>{ -60, 0, 60,120,-120,180};
     public List<int> Level = new List<int>{ 0, 3, 9,27,81,243,729,2187,6561,19683};
@@ -50,7 +51,9 @@ public class Node : MonoBehaviour
         //     Growth();
         //     timeCount=0;
         // }
-        NodePrize=GameObject.Find("Roots").GetComponent<RootGrowup>().Total;
+        currentNodeamount = GameObject.Find("Roots").GetComponent<RootGrowup>().Total;
+        NodePrize = Mathf.Max(currentNodeamount*2,20);
+        //NodePrize=GameObject.Find("Roots").GetComponent<RootGrowup>().Total;
         total=0;
         if(Neighbors.Count==0){
             return;

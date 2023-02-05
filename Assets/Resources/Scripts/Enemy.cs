@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
             if(result.gameObject.TryGetComponent<bullet>(out bullet bul)){
                 //Debug.Log(result.gameObject);
                 Destroy(result.gameObject);
-                HP-=5f;
+                HP-=3f;
                 if(HP<0f){
                     Destroy(gameObject);
                 }

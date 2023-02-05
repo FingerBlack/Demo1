@@ -35,8 +35,8 @@ public class EnemySpawner : MonoBehaviour
         resourceBlockLength = resourcePrefab.transform.localScale.x;
         level=0;
         nodeLevels=new List<int>{5,10,15,20,25,30,40,50,60,70,80,90,100};
-        HPLevels=new List<int>{ 100, 100, 100,150,150,150,200,200,200,300,300,300,400,400};
-        NumberLevels=new List<int>{ 4, 8, 16,24,30,34,38,42,50,60,72,84,96,100};
+        HPLevels=new List<int>{ 100, 125, 150,175,200,225,250,275,300,350,400,450,500,550};
+        NumberLevels=new List<int>{ 4, 8, 16,25,32,38,42,48,55,63,72,84,96,100};
         DamageLevels=new List<float>{ 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f , 0.5f , 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f };
     }
 
