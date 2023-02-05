@@ -9,13 +9,13 @@ public class NextPage7 : MonoBehaviour
     // Start is called before the first frame update
     public int debug;
     //public Button StarGameButton;
-    private AssetBundle myLoadedAssetBundle;
+    public AssetBundle myLoadedAssetBundle;
     private string[] scenePaths;
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(OnClick);
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/Scenes");
-        scenePaths = myLoadedAssetBundle.GetAllScenePaths();
+        //myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/Scenes");
+        //scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class NextPage7 : MonoBehaviour
     }
     void OnClick(){
         debug=1;
-        SceneManager.LoadScene(scenePaths[0], LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //GameObject.Find("Canvas/Page7").SetActive(false);
         //GameObject.Find("Canvas/Page2").SetActive(true);
     }

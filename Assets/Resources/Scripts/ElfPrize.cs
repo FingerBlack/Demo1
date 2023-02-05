@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class ElvesDisplay : MonoBehaviour
+public class ElfPrize : MonoBehaviour
 {
     // Start is called before the first frame update
     private TMP_Text m_TextComponent;
@@ -15,8 +15,7 @@ public class ElvesDisplay : MonoBehaviour
     void Update()
     {
         m_TextComponent = GetComponent<TMP_Text>();
-         string txt="Elves: "+GameObject.Find("Roots/Elves").transform.childCount.ToString()+"/"+GameObject.Find("Roots").GetComponent<RootGrowup>().Total.ToString();
-         m_TextComponent.text=txt;
-        
+        string txt="Prize: 5";
+        m_TextComponent.text=txt;
     }
 }

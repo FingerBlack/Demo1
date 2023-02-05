@@ -9,12 +9,13 @@ public class NextPage6 : MonoBehaviour
     // Start is called before the first frame update
     public int debug;
     //public Button StarGameButton;
-    private AssetBundle myLoadedAssetBundle;
+    public AssetBundle myLoadedAssetBundle;
     private string[] scenePaths;
     void Start()
     {
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/Resources/Scenes");
-        scenePaths = myLoadedAssetBundle.GetAllScenePaths();
+        //myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/Resources/Scenes");
+        
+        //scenePaths = myLoadedAssetBundle.GetAllScenePaths();
         GetComponent<Button>().onClick.AddListener(OnClick);
     }
 
@@ -24,6 +25,6 @@ public class NextPage6 : MonoBehaviour
         
     }
     void OnClick(){
-        SceneManager.LoadScene(scenePaths[0], LoadSceneMode.Single);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
