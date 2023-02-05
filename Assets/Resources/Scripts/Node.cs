@@ -17,6 +17,7 @@ public class Node : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         children = Resources.Load("Prefabs/children") as GameObject;
         if(Neighbors.Count==0){
             roots =new List<int>{ -60, 0, 60,120,-120,180};
@@ -49,6 +50,7 @@ public class Node : MonoBehaviour
         //     Growth();
         //     timeCount=0;
         // }
+        NodePrize=GameObject.Find("Roots").GetComponent<RootGrowup>().Total;
         total=0;
         if(Neighbors.Count==0){
             return;

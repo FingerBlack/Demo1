@@ -9,12 +9,13 @@ public class Edge : MonoBehaviour
     public float guidline;
     public GameObject start;
     public GameObject end;
-    public int TimeCount;
+    // public int TimeCount;
     public int TimePierod;
     public SpriteRenderer Sprite;
     public UnityEngine.Rendering.Universal.Light2D Light2D;
     public float HP;
     public Color col;
+    public float TimeCount;
     void Start()
     {
         possibility=1f;
@@ -23,15 +24,22 @@ public class Edge : MonoBehaviour
         TimePierod=30;
         Sprite=gameObject.GetComponent<SpriteRenderer>();
         col=GetComponent<SpriteRenderer>().color;
+        TimeCount=0;
+        
     }
 
     // Update is called once per frame 
+    
     void Update()
     {       
         //Sprite.color=new Color(1f-(guidline)/10f,1f-(guidline)/10f,1f-(guidline)/10f,255f);
-        if(guidline>0.002f){
-            guidline-=0.002f;
+        
+        TimeCount+=Time.deltaTime;
+        if(TimeCount>0.5f){
+            TimeCount=0;
+            guidline-=0.05f;
         }
+
         Light2D=transform.GetChild(1).GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         Light2D.intensity = guidline/5f;
         GetComponent<SpriteRenderer>().color=new Color(col.r+(255f-HP)/300f,col.g,col.b,1f);

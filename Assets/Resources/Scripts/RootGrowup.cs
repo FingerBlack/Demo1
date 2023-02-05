@@ -14,12 +14,14 @@ public class RootGrowup : MonoBehaviour
     public Vector3 originalElvesScale;
     public Vector3 originalScale;
     public int  resourceslimit;
-    public int Count=0;
-    public int Timepeorid=240;
+    //public int Count=0;
+    public float Timepeorid=2f;
+    public float TimeCount=0f;
     void Start()
     {
         Basic=10;
         Total=6;
+        Timepeorid=2f;
         originalToal=10;
         GameObject elves=Resources.Load("Prefabs/Elf") as GameObject;
         originalElvesScale=elves.transform.localScale;
@@ -35,9 +37,9 @@ public class RootGrowup : MonoBehaviour
     {    
 
         //TimeCount=0;
-        Count++;
-
-        if((Count%Timepeorid)==0){
+        //
+        TimeCount+=Time.deltaTime;
+        if(TimeCount>Timepeorid){
             resourcesCount++;
         }
         float scale=(Basic+Total*0.2f)/originalToal;
