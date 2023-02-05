@@ -9,6 +9,7 @@ public class RootGrowup : MonoBehaviour
     public int originalToal=100;
     public int Total=0;
     public int resourcesCount=0;
+    public int ElvesCount=0;
     public float originalLightScale;
     public Vector3 originalElvesScale;
     public Vector3 originalScale;
@@ -22,13 +23,15 @@ public class RootGrowup : MonoBehaviour
         originalElvesScale=elves.transform.localScale;
         originalScale=transform.localScale;
         originalLightScale=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius;
-        resourcesCount=0;
+        resourcesCount=100;
 
     }
 
     // Update is called once per frame
     void Update()
     {    
+
+        //TimeCount=0;
         float scale=(Basic+Total*0.2f)/originalToal;
         foreach (Transform cld in GameObject.Find("Roots/Elves").transform)
         {

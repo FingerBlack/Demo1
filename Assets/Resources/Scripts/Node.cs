@@ -25,6 +25,14 @@ public class Node : MonoBehaviour
         //Debug.Log(transform.parent);
         total=0f;
         timeCount=0;
+        if(gameObject==GameObject.Find("Roots/Root")){
+            Growth();
+            Growth();
+            Growth();
+            Growth();
+            Growth();
+            Growth();
+        }
     }
 
     // Update is called once per frame
@@ -56,8 +64,17 @@ public class Node : MonoBehaviour
 
             
             int element = Random.Range(0,roots.Count-1); 
+            RootGrowup resources=GameObject.Find("Roots").GetComponent<RootGrowup>();
             if(roots.Count>0){
-                
+                if(gameObject!=GameObject.Find("Roots/Root")){
+
+                    if(resources.resourcesCount>10){
+                        resources.resourcesCount-=10;
+                    }else{
+                        return;
+                    }
+                    
+                }
                 GameObject child = GameObject.Instantiate(children, transform.position+new Vector3(0,0,-1),Quaternion.Euler(0, 0, roots[element]+transform.eulerAngles.z+Random.Range(-10f,10f)),transform) as GameObject;//transform.localPosition父亲坐标系
                 RootGrowup rootGrowup =GameObject.Find("Roots").GetComponent<RootGrowup>();
                 rootGrowup.Total+=1;

@@ -5,11 +5,11 @@ using UnityEngine;
 public class MouseInput : MonoBehaviour
 {   
     
-    public float a;
+    // public float a;
     
-    public float c;
-
-    int[] b = new int[]{ 60,120 };
+    // public float c;
+    public GameObject elf;
+    //int[] b = new int[]{ 60,120 };
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +32,28 @@ public class MouseInput : MonoBehaviour
 
             foreach( Collider2D result in results)
             {
-                Debug.Log(result.gameObject);
+                //Debug.Log(result.gameObject);
                 if(result.gameObject.TryGetComponent<Node>(out Node node)){
                     // float dis=Vector3.Distance((edge.start.transform.position+edge.end.transform.position)/2.0f,Camera.main.ScreenToWorldPoint(Input.mousePosition));
                     // dis-=30f;
-                    node.Growth();
+                    GameObject root=GameObject.Find("Roots/Root");
+                    if(result.gameObject==root){
+                        
+                        // if(Elves.transform.childCount>50){
+                        //     return;
+                        // }
+                        GameObject Roots=root.transform.parent.gameObject;
+                        if(Roots.GetComponent<RootGrowup>().resourcesCount>=2){
+                            GameObject Elves=GameObject.Find("/Roots/Elves");
+                            Roots.GetComponent<RootGrowup>().resourcesCount-=2;
+                            GameObject obj=Instantiate(elf, transform.position, Quaternion.identity,Elves.transform) as GameObject;
+                            obj.transform.position=new Vector3(0f,0f,0f);
+                            obj.GetComponent<Elves>().target=GameObject.Find("Roots/Root");
+                        }
+                        
+                        //TimeCount=0;
+                    }else
+                        node.Growth();
                     flag=true;
                     break;
                 }

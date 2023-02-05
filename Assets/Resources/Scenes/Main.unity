@@ -199,11 +199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 803696406816617126, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.39806256
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 803696406816617126, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.71450794
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 803696406816617126, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -650,6 +650,8 @@ MonoBehaviour:
   Basic: 1000
   originalToal: 1005
   Total: 5
+  resourcesCount: 0
+  ElvesCount: 0
   originalLightScale: 0
   originalElvesScale: {x: 0, y: 0, z: 0}
   originalScale: {x: 0, y: 0, z: 0}
@@ -827,6 +829,11 @@ MonoBehaviour:
   - 3
   - 4
   - 5
+  Debug: {x: 0, y: 0}
+  count: 0
+  angle: 0
+  x: 0
+  y: 0
 --- !u!1 &1197608103
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,8 +863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e1e40bac78dcb488b1454fe1c354ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: 0
-  c: 0
+  elf: {fileID: 5668641078752963613, guid: a3098a1a0818b1c4480fc3a0fd50e511, type: 3}
 --- !u!4 &1197608105
 Transform:
   m_ObjectHideFlags: 0
@@ -1129,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 1554971427495281591, guid: 893d849a1cf7b664ea70493f2ea4a321, type: 3}
       propertyPath: m_Name
       value: ElvesSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554971427495281591, guid: 893d849a1cf7b664ea70493f2ea4a321, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1554971427495281608, guid: 893d849a1cf7b664ea70493f2ea4a321, type: 3}
       propertyPath: root

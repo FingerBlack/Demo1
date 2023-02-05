@@ -18,12 +18,12 @@ public class SpawnBehavior : MonoBehaviour
     private float highBound ;
     private float resourceBlockLength = 0;
     public int level;
-    public List<int> nodeLevels=new List<int>{5,20,30,100,200};
+    public List<int> nodeLevels=new List<int>{20,30,50,100,200};
     public List<int> numberLevels=new List<int>{ 10, 15, 20,25,30,35};
     public List<int> sizeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> rangeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> rangeSizeLevels=new List<int>{ 2, 4, 5,6,7,8};
-    public List<int> resourceLimit=new List<int>{ 100, 200, 300,400,500,600};
+    public List<int> resourceLimit=new List<int>{ 500, 1000, 3000,4000,5000,6000};
     public float TimePeirod;
     public float TimeCount;
     // Start is called before the first frame update
