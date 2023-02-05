@@ -15,7 +15,7 @@ public class ResourceDisplay : MonoBehaviour
     void Update()
     {
         m_TextComponent = GetComponent<TMP_Text>();
-        string txt="Node: "+GameObject.Find("Roots").GetComponent<RootGrowup>().resourcesCount.ToString()+"/200";
+        string txt="Resource: "+GameObject.Find("Roots").GetComponent<RootGrowup>().resourcesCount.ToString()+"/200";
         m_TextComponent.text=txt;
         
     }

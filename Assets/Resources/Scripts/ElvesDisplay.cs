@@ -15,7 +15,7 @@ public class ElvesDisplay : MonoBehaviour
     void Update()
     {
         m_TextComponent = GetComponent<TMP_Text>();
-         string txt="Node: "+GameObject.Find("Roots/Elves").transform.childCount.ToString()+"/200";
+         string txt="Elves: "+GameObject.Find("Roots/Elves").transform.childCount.ToString()+"/200";
          m_TextComponent.text=txt;
         
     }
