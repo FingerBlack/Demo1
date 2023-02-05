@@ -21,9 +21,9 @@ public class Node : MonoBehaviour
         
         children = Resources.Load("Prefabs/children") as GameObject;
         if(Neighbors.Count==0){
-            roots =new List<int>{ -60, 0, 60,120,-120,180};
+            roots =new List<int>{ -30, 30, 90,150,-90,-150};
         }else{
-            roots =new List<int>{ -60, 0, 60,120,-120};
+            roots =new List<int>{ -30, 30, 90,150,-90};
         }
         //Debug.Log(transform.parent);
         total=0f;
