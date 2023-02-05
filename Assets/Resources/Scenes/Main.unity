@@ -242,8 +242,44 @@ PrefabInstance:
       value: Roots
       objectReference: {fileID: 0}
     - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: total
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: children
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: timeCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
       propertyPath: Neighbors.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: Neighbors.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: Neighbors.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: Neighbors.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: Neighbors.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: Neighbors.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: Neighbors.Array.data[5]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
@@ -656,6 +692,8 @@ MonoBehaviour:
   originalElvesScale: {x: 0, y: 0, z: 0}
   originalScale: {x: 0, y: 0, z: 0}
   resourceslimit: 0
+  Count: 0
+  Timepeorid: 120
 --- !u!1 &1124386837
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elf: {fileID: 5668641078752963613, guid: a3098a1a0818b1c4480fc3a0fd50e511, type: 3}
+  elfPrize: 5
 --- !u!4 &1197608105
 Transform:
   m_ObjectHideFlags: 0

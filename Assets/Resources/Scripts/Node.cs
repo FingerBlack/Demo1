@@ -55,7 +55,7 @@ public class Node : MonoBehaviour
         }
         foreach (GameObject edge in Neighbors)
         {
-            total+=edge.GetComponent<Edge>().possibility+Level[edge.GetComponent<Edge>().guidline];
+            total+=edge.GetComponent<Edge>().possibility+Level[(int)edge.GetComponent<Edge>().guidline];
         }
     }
     public void Growth(){

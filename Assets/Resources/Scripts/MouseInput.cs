@@ -53,8 +53,8 @@ public class MouseInput : MonoBehaviour
                         }
                         
                         //TimeCount=0;
-                    }else
-                        node.Growth();
+                    }// }else
+                    //     node.Growth();
                     flag=true;
                     break;
                 }
@@ -68,8 +68,8 @@ public class MouseInput : MonoBehaviour
                     if(result.gameObject.TryGetComponent<Edge>(out Edge edge)){
                         // float dis=Vector3.Distance((edge.start.transform.position+edge.end.transform.position)/2.0f,Camera.main.ScreenToWorldPoint(Input.mousePosition));
                         // dis-=30f;
-                        if(edge.guidline<9)
-                            edge.guidline+=1 ;
+                        if(edge.guidline<9f)
+                            edge.guidline+=1f ;
                         break;
                     }
                 }
@@ -92,8 +92,9 @@ public class MouseInput : MonoBehaviour
                 if(result.gameObject.TryGetComponent<Edge>(out Edge edge)){
                     // float dis=Vector3.Distance((edge.start.transform.position+edge.end.transform.position)/2.0f,Camera.main.ScreenToWorldPoint(Input.mousePosition));
                     // dis-=30f;
-                    if(edge.guidline>0)
-                        edge.guidline-=1;
+                    // if(edge.guidline>0)
+                    //     edge.guidline-=1;
+                    edge.transform.GetChild(0).GetComponent<Node>().Growth();
                 }
                 
             }

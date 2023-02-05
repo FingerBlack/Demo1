@@ -26,6 +26,7 @@ public class RootGrowup : MonoBehaviour
         originalScale=transform.localScale;
         originalLightScale=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius;
         resourcesCount=100;
+        Timepeorid=240;
 
     }
 

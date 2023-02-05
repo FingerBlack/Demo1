@@ -57,7 +57,7 @@ public class Elves : MonoBehaviour
                 float Dice =Random.Range(0f,1f);
                 Edge e=edge.GetComponent<Edge>();
                 //Debug.Log(element+" "+e.possibility/node.total);
-                if(Dice <(e.possibility+Level[e.guidline])/node.total){
+                if(Dice <(e.possibility+Level[(int)e.guidline])/node.total){
                     //Debug.Log(target+" "+e.start);
                     if(target!=e.start){
                         target=e.start;
