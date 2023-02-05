@@ -67,15 +67,15 @@ public class EnemySpawner : MonoBehaviour
 
                 // x=lowBound*Mathf.Sin(Random.Range(0f,360f));
                 // y=lowBound*Mathf.Cos(Random.Range(0f,360f));
-                
-                float angle=Random.Range(0f,360f);
+                int directionRange=Random(0,5);
+                float angle=Random.Range(directionRange*60f,directionRange*60f+60f);
                 x=lowBound*Mathf.Sin(angle);
                 y=lowBound*Mathf.Cos(angle);
                 //spawn resourse
-                //GameObject Resource = GameObject.Find("/Resource");
-                // for(int i = 0; i < minBlockPerSide; i++)
+                //GameObject Resource = GameObject.Find("/++)
                 // {
-                //     for (int j = 0; j < minBlockPerSide; j++)
+                //     for (int j = 0; j < minBlockPerResource");
+                // for(int i = 0; i < minBlockPerSide; iSide; j++)
                 //     {
                 GameObject obj = Instantiate(resourcePrefab, root.transform.position + new Vector3(x, y, 0), Quaternion.identity,GameObject.Find("/Enemies").transform) as GameObject;
                 obj.GetComponent<Enemy>().HP=HPLevels[level];

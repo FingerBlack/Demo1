@@ -28,7 +28,7 @@ public class Resource : MonoBehaviour
 
             }
             if(dis<0.01f&&target==root){
-                
+                Destroy(gameObject);
             }
         }else{
             ContactFilter2D filter = new ContactFilter2D().NoFilter();
