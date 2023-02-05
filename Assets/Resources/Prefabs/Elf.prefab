@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 4b6850c9d5cff114ba2e71cca073eb31, type: 3}
-  m_Color: {r: 0.11320752, g: 0.10003557, b: 0.10003557, a: 1}
+  m_Color: {r: 1, g: 0.7097777, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,3 +132,18 @@ MonoBehaviour:
   bullet: {fileID: 3472111056086764557, guid: d809803e1d0b7314c89a218eb19727d9, type: 3}
   fireRate: 2
   flag: 0
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  results: []

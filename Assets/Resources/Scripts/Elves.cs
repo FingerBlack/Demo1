@@ -93,7 +93,7 @@ public class Elves : MonoBehaviour
             }
         }else{
             
-            Physics2D.OverlapCircle(transform.position,2f,filter,results);
+            Physics2D.OverlapCircle(transform.position,5f,filter,results);
             foreach( Collider2D result in results)
             {
                 //Debug.Log(result.gameObject);

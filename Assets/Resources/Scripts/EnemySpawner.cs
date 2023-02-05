@@ -19,10 +19,10 @@ public class EnemySpawner : MonoBehaviour
     private float resourceBlockLength = 0;
     //public float originalHP;
     public int level;
-    public List<int> nodeLevels=new List<int>{5,20,30,100,200};
-    public List<int> HPLevels=new List<int>{ 10, 15, 20,25,30,35};
-    public List<int> NumberLevels=new List<int>{ 2, 4, 5,6,7,8};
-    public List<float> DamageLevels=new List<float>{ 0.5f, 1f, 2f,3f,4f,5f};
+    public List<int> nodeLevels=new List<int>{5,10,15,20,25,30,40,50};
+    public List<int> HPLevels=new List<int>{ 10, 10, 10,10,10,10,10,10,10};
+    public List<int> NumberLevels=new List<int>{ 2, 4, 8,15,25,30,36,40,50};
+    public List<float> DamageLevels=new List<float>{ 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f , 0.5f , 0.5f };
     // Start is called before the first frame update
     void Start()
     {

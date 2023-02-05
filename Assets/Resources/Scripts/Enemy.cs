@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public List<Collider2D> results;
     void Start()
     {
-        originalspeed=0.25f;
+        originalspeed=0.7f;
         speed=originalspeed;
         HP=10f;
         filter = new ContactFilter2D().NoFilter();

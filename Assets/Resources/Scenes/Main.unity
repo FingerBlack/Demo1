@@ -413,7 +413,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -817,8 +817,16 @@ MonoBehaviour:
   minBlockPerSide: 10
   blockSizeIncreaseRate: 2
   level: 0
+  nodeLevels: 05000000140000001e00000064000000c8000000
   HPLevels: 0a0000000f00000014000000190000001e00000023000000
   NumberLevels: 020000000400000005000000060000000700000008000000
+  DamageLevels:
+  - 0.5
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
 --- !u!1 &1197608103
 GameObject:
   m_ObjectHideFlags: 0
