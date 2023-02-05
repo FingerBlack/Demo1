@@ -19,7 +19,7 @@ public class RootGrowup : MonoBehaviour
     void Start()
     {
         Basic=10;
-        Total=0;
+        Total=6;
         originalToal=10;
         GameObject elves=Resources.Load("Prefabs/Elf") as GameObject;
         originalElvesScale=elves.transform.localScale;

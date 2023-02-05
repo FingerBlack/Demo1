@@ -40,12 +40,12 @@ public class SpawnBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int count=0;
+        
         TimeCount+=Time.deltaTime;
-        foreach(int i in nodeLevels){
-            count+=1;
-            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>i){
-                level=count;
+        for(int i=0;i<nodeLevels.Count ;i++){
+            
+            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>nodeLevels[i]){
+                level=i;
             }
         }
         
@@ -98,7 +98,7 @@ public class SpawnBehavior : MonoBehaviour
             // enlarge hollow
             
             //level+=1;
-            minBlockPerSide=numberLevels[level];
+            minBlockPerSide=numberLevels[level]*3;
 
 
         }
