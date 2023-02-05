@@ -19,6 +19,7 @@ public class EnemySpawner : MonoBehaviour
     private float resourceBlockLength = 0;
     //public float originalHP;
     public int level;
+    public List<int> nodeLevels=new List<int>{5,20,30,100,200};
     public List<int> HPLevels=new List<int>{ 10, 15, 20,25,30,35};
     public List<int> NumberLevels=new List<int>{ 2, 4, 5,6,7,8};
     // Start is called before the first frame update
@@ -33,7 +34,15 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
+        int count=0;
+        
+        foreach(int i in nodeLevels){
+            count+=1;
+            if(GameObject.Find("Roots/Root").GetComponent<RootGrowup>().Total>i){
+                level=count;
+            }
+        }
         lowBound=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius+2f;
         while (GameObject.Find("Enemies").transform.childCount<3&&level<=5)
         {
@@ -68,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
                 //Debug.Log("spawned at: " + x + " " + y);
                 n--;
             }
-            level+=1;
+            // level+=1;
         }
     }
 }

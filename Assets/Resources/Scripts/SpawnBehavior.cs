@@ -18,12 +18,14 @@ public class SpawnBehavior : MonoBehaviour
     private float highBound ;
     private float resourceBlockLength = 0;
     public int level;
+    public List<int> nodeLevels=new List<int>{5,20,30,100,200};
     public List<int> numberLevels=new List<int>{ 10, 15, 20,25,30,35};
     public List<int> sizeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> rangeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> rangeSizeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> resourceLimit=new List<int>{ 100, 200, 300,400,500,600};
     public float TimePeirod;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,16 @@ public class SpawnBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        int count=0;
+        
+        foreach(int i in nodeLevels){
+            count+=1;
+            if(GameObject.Find("Roots/Root").GetComponent<RootGrowup>().Total>i){
+                level=count;
+            }
+        }
+        
+        
         lowBound=rangeLevels[level];
         highBound=lowBound+rangeSizeLevels[level];
         while (GameObject.Find("Resources").transform.childCount<resourceLimit[level]&&level<=5)

@@ -11,6 +11,7 @@ public class ElvesSpawn : MonoBehaviour
     public float TimePeirod;
     public GameObject elf;
     public GameObject root;
+    public List<int> nodeLevels=new List<int>{5,20,30,100,200};
     
     void Start()
     {
