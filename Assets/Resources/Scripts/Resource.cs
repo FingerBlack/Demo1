@@ -25,6 +25,10 @@ public class Resource : MonoBehaviour
             transform.position=Vector3.MoveTowards(transform.position,target.transform.position,speed*Time.deltaTime);
             if(dis<0.01f&&target!=root){
                 target=target.transform.parent.gameObject.GetComponent<Edge>().start;
+
+            }
+            if(dis<0.01f&&target==root){
+                
             }
         }else{
             ContactFilter2D filter = new ContactFilter2D().NoFilter();

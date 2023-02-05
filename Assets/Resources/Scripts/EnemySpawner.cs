@@ -29,13 +29,12 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         spawnGap = 2f;
-        highBound = 4*spawnGap;
         resourceBlockLength = resourcePrefab.transform.localScale.x;
         level=0;
-        nodeLevels=new List<int>{5,10,15,20,25,30,40,50};
-        HPLevels=new List<int>{ 20, 20, 20,20,20,20,20,20,20};
-        NumberLevels=new List<int>{ 2, 4, 8,15,25,30,36,40,50};
-        DamageLevels=new List<float>{ 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f , 0.5f , 0.5f };
+        nodeLevels=new List<int>{5,10,15,20,25,30,40,50,60,70,80,90,100};
+        HPLevels=new List<int>{ 20, 20, 20,20,20,20,20,20,20,20,20,20,20,20};
+        NumberLevels=new List<int>{ 2, 4, 8,15,25,30,36,40,50,60,72,84,96,100};
+        DamageLevels=new List<float>{ 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f , 0.5f , 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f };
     }
 
     // Update is called once per frame
@@ -70,8 +69,8 @@ public class EnemySpawner : MonoBehaviour
                 // y=lowBound*Mathf.Cos(Random.Range(0f,360f));
                 
                 float angle=Random.Range(0f,360f);
-                x=Random.Range(lowBound,highBound)*Mathf.Sin(angle);
-                y=Random.Range(lowBound,highBound)*Mathf.Cos(angle);
+                x=lowBound*Mathf.Sin(angle);
+                y=lowBound*Mathf.Cos(angle);
                 //spawn resourse
                 //GameObject Resource = GameObject.Find("/Resource");
                 // for(int i = 0; i < minBlockPerSide; i++)
