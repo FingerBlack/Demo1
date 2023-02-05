@@ -67,7 +67,7 @@ public class EnemySpawner : MonoBehaviour
 
                 // x=lowBound*Mathf.Sin(Random.Range(0f,360f));
                 // y=lowBound*Mathf.Cos(Random.Range(0f,360f));
-                int directionRange=Random(0,5);
+                int directionRange=Random.Range(0,5);
                 float angle=Random.Range(directionRange*60f,directionRange*60f+60f);
                 x=lowBound*Mathf.Sin(angle);
                 y=lowBound*Mathf.Cos(angle);
