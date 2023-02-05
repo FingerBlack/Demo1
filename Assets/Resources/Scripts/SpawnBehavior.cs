@@ -20,7 +20,7 @@ public class SpawnBehavior : MonoBehaviour
     public int level;
     public List<int> nodeLevels=new List<int>{20,30,50,100,200};
     public List<int> numberLevels=new List<int>{ 10, 10, 10,10,10,10};
-    public List<int> sizeLevels=new List<int>{ 3, 3, 3,3,3,3};
+    public List<int> sizeLevels=new List<int>{ 2, 2, 2,2,3,3};
     public List<int> rangeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> rangeSizeLevels=new List<int>{ 2, 3, 4,6,8,9};
     public List<int> resourceLimit=new List<int>{ 1000, 5000, 8000,20000,30000,60000};
@@ -33,7 +33,7 @@ public class SpawnBehavior : MonoBehaviour
     {
         nodeLevels=new List<int>{20,30,50,100,200};
         numberLevels=new List<int>{ 10, 10, 10,10,10,10};
-        sizeLevels=new List<int>{ 3, 3, 3,3,3,3};
+        sizeLevels=new List<int>{ 2, 2, 2,2,2,2};
         rangeLevels=new List<int>{ 2, 4, 5,6,7,8};
         rangeSizeLevels=new List<int>{ 2, 3, 4,6,8,9};
         resourceLimit=new List<int>{ 1000, 5000, 8000,20000,30000,60000};
