@@ -14,7 +14,7 @@ public class NextPage7 : MonoBehaviour
     void Start()
     {
         GetComponent<Button>().onClick.AddListener(OnClick);
-        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/Resources/Scenes");
+        myLoadedAssetBundle = AssetBundle.LoadFromFile("Assets/Scenes");
         scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
@@ -24,6 +24,7 @@ public class NextPage7 : MonoBehaviour
         
     }
     void OnClick(){
+        debug=1;
         SceneManager.LoadScene(scenePaths[0], LoadSceneMode.Single);
         //GameObject.Find("Canvas/Page7").SetActive(false);
         //GameObject.Find("Canvas/Page2").SetActive(true);

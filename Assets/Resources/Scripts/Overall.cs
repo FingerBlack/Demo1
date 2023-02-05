@@ -17,7 +17,7 @@ public class Overall : MonoBehaviour
     {   
 
         if(ifstart){
-            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>=200){
+            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>=100){
                 ifstart=false;
                 GameObject.Find("PageControl").GetComponent<PageControl>().ValueDisplay.SetActive(false);
                 GameObject.Find("PageControl").GetComponent<PageControl>().Page6.SetActive(true);
