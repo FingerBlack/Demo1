@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     {
         transform.position=Vector3.MoveTowards(transform.position,root.transform.position,speed*Time.deltaTime);
 
-        Physics2D.OverlapCircle(transform.position, 0.01f,filter,results);
+        Physics2D.OverlapCircle(transform.position, 0.05f,filter,results);
         //Debug.Log(Input.mousePosition);
         //bool flag=false;
 
