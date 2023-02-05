@@ -25,13 +25,14 @@ public class SpawnBehavior : MonoBehaviour
     public List<int> rangeSizeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> resourceLimit=new List<int>{ 100, 200, 300,400,500,600};
     public float TimePeirod;
-
+    public float TimeCount;
     // Start is called before the first frame update
     void Start()
     {
 
         spawnGap = 2f;
         TimePeirod=10f;
+        TimeCount=0f;
         resourceBlockLength = resourcePrefab.transform.localScale.x;
         level=0;
     }
@@ -40,7 +41,7 @@ public class SpawnBehavior : MonoBehaviour
     void Update()
     {
         int count=0;
-        
+        TimeCount+=Time.deltaTime;
         foreach(int i in nodeLevels){
             count+=1;
             if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>i){
@@ -51,9 +52,11 @@ public class SpawnBehavior : MonoBehaviour
         
         lowBound=rangeLevels[level];
         highBound=lowBound+rangeSizeLevels[level];
-        while (GameObject.Find("Resources").transform.childCount<resourceLimit[level]&&level<=5)
+        while (GameObject.Find("Resources").transform.childCount<resourceLimit[level]&&TimeCount>TimePeirod)
         {
             // spawn n obj per hollow
+            TimeCount=0f;
+
             numPerSpawn=numberLevels[level];
             minBlockPerSide=sizeLevels[level];
             int n=numPerSpawn;
@@ -64,8 +67,9 @@ public class SpawnBehavior : MonoBehaviour
                 //float dist = 0;
 
                 // check if in hollow
-                x=Random.Range(lowBound,highBound)*Mathf.Sin(Random.Range(0f,360f));
-                y=Random.Range(lowBound,highBound)*Mathf.Cos(Random.Range(0f,360f));
+                float angle=Random.Range(0f,360f);
+                x=Random.Range(lowBound,highBound)*Mathf.Sin(angle);
+                y=Random.Range(lowBound,highBound)*Mathf.Cos(angle);
                 // while (dist <= lowBound || dist >= highBound)
                 // {
                 //     x = Random.Range((highBound + spawnGap) * -1, highBound + spawnGap);
