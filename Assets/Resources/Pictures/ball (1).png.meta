@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 87cd1cbb006e4f54cbe9b4ffed5ac010
+guid: ecd2dd863709c634299ffa3c2437da0f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,22 +117,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u68112_0"
+      name: ball (1)_0
       rect:
         serializedVersion: 2
-        x: 146
-        y: 198
-        width: 1403
-        height: 1956
+        x: 0
+        y: 0
+        width: 72
+        height: 72
       alignment: 9
-      pivot: {x: 0.4874201, y: 0.16613616}
+      pivot: {x: 0.51531583, y: 0.48266283}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acf69047d7b3d7346abea07f37ad7fac
-      internalID: -1747717662
+      spriteID: e388ef659fea2674fa053085bf9d1f6f
+      internalID: -1625001289
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3b410db769f0fbf49a75a67619d7a290
+    spriteID: 81e4e816378706f498be939cb00aa523
     internalID: 0
     vertices: []
     indices: 
@@ -148,8 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u68112_1": 624457971
-      "\u68112_0": -1747717662
+      ball (1)_0: -1625001289
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

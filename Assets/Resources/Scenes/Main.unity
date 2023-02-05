@@ -246,6 +246,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 49093236, guid: 77d7c3e6f6acdd848b4981761d0a5672, type: 3}
     - target: {fileID: 803696408031989848, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6862745
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989848, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -264,6 +268,22 @@ PrefabInstance:
     - target: {fileID: 803696408031989848, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
       propertyPath: m_SortingOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989849, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989849, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989849, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 803696408031989849, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 803696408031989850, guid: 82ce742acb453eb4a940ed8ea3f8f5f2, type: 3}
       propertyPath: total
@@ -382,7 +402,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: -1747717662, guid: 87cd1cbb006e4f54cbe9b4ffed5ac010, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.57254905}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -708,7 +728,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.67
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
