@@ -91,7 +91,7 @@ public class SpawnBehavior : MonoBehaviour
                 {
                     for (int j = 0; j < minBlockPerSide; j++)
                     {
-                        GameObject obj = Instantiate(resourcePrefab, root.transform.position + new Vector3(x+i* resourceBlockLength, y+j* resourceBlockLength, 0), Quaternion.identity,GameObject.Find("/Resources").transform) as GameObject;
+                        GameObject obj = Instantiate(resourcePrefab, root.transform.position + new Vector3(x+i* resourceBlockLength/2f, y+j* resourceBlockLength/2f, 0), Quaternion.identity,GameObject.Find("/Resources").transform) as GameObject;
                     
                     }
                 }
