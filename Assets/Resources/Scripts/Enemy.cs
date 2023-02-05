@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public List<Collider2D> results;
     void Start()
     {
-        originalspeed=0.4f;
+        originalspeed=0.6f;
         speed=originalspeed;
         HP=10f;
         filter = new ContactFilter2D().NoFilter();
@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
             if(result.gameObject.TryGetComponent<bullet>(out bullet bul)){
                 //Debug.Log(result.gameObject);
                 Destroy(result.gameObject);
-                HP-=3f;
+                HP-=5f;
                 if(HP<0f){
                     Destroy(gameObject);
                 }

@@ -52,7 +52,7 @@ public class Node : MonoBehaviour
         //     timeCount=0;
         // }
         currentNodeamount = GameObject.Find("Roots").GetComponent<RootGrowup>().Total;
-        NodePrize = Mathf.Max(currentNodeamount*2,20);
+        NodePrize = Mathf.Max((int)(0.04 * currentNodeamount* currentNodeamount), 20);
         //NodePrize=GameObject.Find("Roots").GetComponent<RootGrowup>().Total;
         total=0;
         if(Neighbors.Count==0){
