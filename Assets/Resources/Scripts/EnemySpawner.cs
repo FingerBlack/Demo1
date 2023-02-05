@@ -66,10 +66,12 @@ public class EnemySpawner : MonoBehaviour
 
                 // check if in hollow
 
-                x=lowBound*Mathf.Sin(Random.Range(0f,360f));
-                y=lowBound*Mathf.Cos(Random.Range(0f,360f));
+                // x=lowBound*Mathf.Sin(Random.Range(0f,360f));
+                // y=lowBound*Mathf.Cos(Random.Range(0f,360f));
                 
-
+                float angle=Random.Range(0f,360f);
+                x=Random.Range(lowBound,highBound)*Mathf.Sin(angle);
+                y=Random.Range(lowBound,highBound)*Mathf.Cos(angle);
                 //spawn resourse
                 //GameObject Resource = GameObject.Find("/Resource");
                 // for(int i = 0; i < minBlockPerSide; i++)
