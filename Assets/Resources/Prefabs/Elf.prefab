@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5668641078752963609}
   - component: {fileID: 5668641078752963614}
   - component: {fileID: 5668641078752963615}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Elf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,3 +131,4 @@ MonoBehaviour:
   Level: 0000000003000000090000001b00000051000000f3000000d90200008b080000a1190000e34c0000
   bullet: {fileID: 3472111056086764557, guid: d809803e1d0b7314c89a218eb19727d9, type: 3}
   fireRate: 2
+  flag: 0

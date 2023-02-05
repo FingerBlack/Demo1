@@ -11,10 +11,12 @@ public class ElvesSpawn : MonoBehaviour
     public float TimePeirod;
     public GameObject elf;
     public GameObject root;
+    
     void Start()
     {
         TimeCount=0;
         TimePeirod=1f;
+        
     }
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class ElvesSpawn : MonoBehaviour
                 return;
             }
             GameObject obj=Instantiate(elf, transform.position, Quaternion.identity,Elves.transform) as GameObject;
+            
             obj.GetComponent<Elves>().target=root;
             TimeCount=0;
         }

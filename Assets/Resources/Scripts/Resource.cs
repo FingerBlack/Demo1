@@ -35,7 +35,7 @@ public class Resource : MonoBehaviour
 
             foreach( Collider2D result in results)
             {
-                Debug.Log(result.gameObject);
+                //Debug.Log(result.gameObject);
                 if(result.gameObject.TryGetComponent<Edge>(out Edge Edge)){
                     // float dis=Vector3.Distance((edge.start.transform.position+edge.end.transform.position)/2.0f,Camera.main.ScreenToWorldPoint(Input.mousePosition));
                     // dis-=30f;

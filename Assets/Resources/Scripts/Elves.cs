@@ -16,12 +16,17 @@ public class Elves : MonoBehaviour
     public float fireRate = 2f;
     float nextToSHoot = 0;
     public bool flag;
+    public ContactFilter2D filter;
+    public List<Collider2D> results;
     void Start()
     {
         flag=false;
         speed=1f;
         target=GameObject.Find("Roots/Root");
         node=target.GetComponent<Node>();
+        filter = new ContactFilter2D().NoFilter();
+        //filter.layerMask=LayerMask.GetMask("Edges","Elves","Resources","Bullets");
+        //results = new List<Collider2D>();
 
     }
 
@@ -72,7 +77,7 @@ public class Elves : MonoBehaviour
         }
         if (flag)
         {
-            Debug.Log("shoot");
+            //Debug.Log("shoot");
             if (nextToSHoot <= 0)
             {
                 nextToSHoot = fireRate;
@@ -87,12 +92,11 @@ public class Elves : MonoBehaviour
                 nextToSHoot -= Time.deltaTime;
             }
         }else{
-            ContactFilter2D filter = new ContactFilter2D().NoFilter();
-            List<Collider2D> results = new List<Collider2D>();
+            
             Physics2D.OverlapCircle(transform.position,2f,filter,results);
             foreach( Collider2D result in results)
             {
-                Debug.Log(result.gameObject);
+                //Debug.Log(result.gameObject);
                 if(result.gameObject.TryGetComponent<Enemy>(out Enemy enemy)){
                     // float dis=Vector3.Distance((edge.start.transform.position+edge.end.transform.position)/2.0f,Camera.main.ScreenToWorldPoint(Input.mousePosition));
                     // dis-=30f;
