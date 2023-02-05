@@ -57,6 +57,7 @@ public class EnemySpawner : MonoBehaviour
             // spawn n obj per hollow
             numPerSpawn=NumberLevels[level];
             int n = numPerSpawn;
+            int directionRange=Random.Range(0,5);
             while (n > 0)
             {
                 float x = 0;
@@ -67,7 +68,7 @@ public class EnemySpawner : MonoBehaviour
 
                 // x=lowBound*Mathf.Sin(Random.Range(0f,360f));
                 // y=lowBound*Mathf.Cos(Random.Range(0f,360f));
-                int directionRange=Random.Range(0,5);
+                
                 float angle=Random.Range(directionRange*60f,directionRange*60f+60f);
                 x=lowBound*Mathf.Sin(angle);
                 y=lowBound*Mathf.Cos(angle);
