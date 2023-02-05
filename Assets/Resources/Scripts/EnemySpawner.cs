@@ -75,8 +75,8 @@ public class EnemySpawner : MonoBehaviour
                 
                 angle=Random.Range(directionRange* 1/3f*Mathf.PI,directionRange*1/3f*Mathf.PI+1/3f*Mathf.PI);
                 //angle=0;
-                x=lowBound*Mathf.Sin(angle);
-                y=lowBound*Mathf.Cos(angle);
+                x=Random.Range(lowBound,lowBound+2f)*Mathf.Sin(angle);
+                y=Random.Range(lowBound,lowBound+2f)*Mathf.Cos(angle);
                 //spawn resourse
                 //GameObject Resource = GameObject.Find("/++)
                 // {
