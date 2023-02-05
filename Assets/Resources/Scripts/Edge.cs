@@ -37,7 +37,8 @@ public class Edge : MonoBehaviour
         TimeCount+=Time.deltaTime;
         if(TimeCount>0.5f){
             TimeCount=0;
-            guidline-=0.05f;
+            if(guidline>0.05f)
+                guidline-=0.05f;
         }
 
         Light2D=transform.GetChild(1).GetComponent<UnityEngine.Rendering.Universal.Light2D>();
