@@ -25,6 +25,9 @@ public class EnemySpawner : MonoBehaviour
     public List<float> DamageLevels;
     public Vector2 Debug;
     public int count;
+    public float angle;
+    public float x;
+    public float y;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,17 +54,18 @@ public class EnemySpawner : MonoBehaviour
             }
             
         }
+       
         lowBound=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius+2f;
-        while (GameObject.Find("Enemies").transform.childCount<3)
+        if (GameObject.Find("Enemies").transform.childCount==0)
         {
             // spawn n obj per hollow
             numPerSpawn=NumberLevels[level];
             int n = numPerSpawn;
-            int directionRange=Random.Range(0,5);
+            float directionRange=Random.Range(0f,5f);
             while (n > 0)
             {
-                float x = 0;
-                float y = 0;
+                x = 0;
+                y = 0;
                 //float dist = 0;
 
                 // check if in hollow
@@ -69,7 +73,8 @@ public class EnemySpawner : MonoBehaviour
                 // x=lowBound*Mathf.Sin(Random.Range(0f,360f));
                 // y=lowBound*Mathf.Cos(Random.Range(0f,360f));
                 
-                float angle=Random.Range(directionRange*60f,directionRange*60f+60f);
+                angle=Random.Range(directionRange* 1/3f*Mathf.PI,directionRange*1/3f*Mathf.PI+1/3f*Mathf.PI);
+                //angle=0;
                 x=lowBound*Mathf.Sin(angle);
                 y=lowBound*Mathf.Cos(angle);
                 //spawn resourse

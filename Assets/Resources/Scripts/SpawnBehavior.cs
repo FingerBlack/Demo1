@@ -52,7 +52,7 @@ public class SpawnBehavior : MonoBehaviour
         
         lowBound=rangeLevels[level];
         highBound=lowBound+rangeSizeLevels[level];
-        while (GameObject.Find("Resources").transform.childCount<resourceLimit[level]&&TimeCount>TimePeirod)
+        if (GameObject.Find("Resources").transform.childCount<resourceLimit[level]&&TimeCount>TimePeirod)
         {
             // spawn n obj per hollow
             TimeCount=0f;
