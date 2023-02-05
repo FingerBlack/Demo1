@@ -17,10 +17,12 @@ public class RootGrowup : MonoBehaviour
     //public int Count=0;
     public float Timepeorid=2f;
     public float TimeCount=0f;
+    public float HP=255f;
     void Start()
     {
         Basic=10;
         Total=6;
+        HP=255f;
         Timepeorid=2f;
         originalToal=10;
         GameObject elves=Resources.Load("Prefabs/Elf") as GameObject;
@@ -38,6 +40,10 @@ public class RootGrowup : MonoBehaviour
 
         //TimeCount=0;
         //
+ 
+         if(!GameObject.Find("OverAll").GetComponent<Overall>().ifstart){
+            return;
+        }
         TimeCount+=Time.deltaTime;
         if(TimeCount>Timepeorid){
             TimeCount=0;

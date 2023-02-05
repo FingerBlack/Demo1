@@ -20,6 +20,9 @@ public class MouseInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        if(!GameObject.Find("OverAll").GetComponent<Overall>().ifstart){
+            return;
+        }
         elfPrize=5;
         if (Input.GetMouseButtonDown(0))
         {

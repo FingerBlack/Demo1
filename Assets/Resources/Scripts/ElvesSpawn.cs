@@ -22,7 +22,10 @@ public class ElvesSpawn : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if(!GameObject.Find("OverAll").GetComponent<Overall>().ifstart){
+            return;
+        }
         TimeCount+=Time.deltaTime;
         Localposition=new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f),0);
         

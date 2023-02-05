@@ -43,7 +43,10 @@ public class MouseOperation : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        if(!GameObject.Find("OverAll").GetComponent<Overall>().ifstart){
+            return;
+        }
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if (Camera.main.fieldOfView <= 100)

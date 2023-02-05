@@ -47,7 +47,10 @@ public class SpawnBehavior : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if(!GameObject.Find("OverAll").GetComponent<Overall>().ifstart){
+            return;
+        }
         ResourceTotal=GameObject.Find("Resources").transform.childCount;
         TimeCount+=Time.deltaTime;
         for(int i=0;i<nodeLevels.Count ;i++){
