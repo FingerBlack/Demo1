@@ -2779,7 +2779,7 @@ MonoBehaviour:
   Page6: {fileID: 1295970193}
   Page7: {fileID: 345983290}
   HelpPage: {fileID: 621992688}
-  ValueDisplay: {fileID: 0}
+  ValueDisplay: {fileID: 972417848}
 --- !u!224 &1018737854
 RectTransform:
   m_ObjectHideFlags: 0
