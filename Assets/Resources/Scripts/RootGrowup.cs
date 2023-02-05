@@ -15,7 +15,7 @@ public class RootGrowup : MonoBehaviour
     public Vector3 originalScale;
     public int  resourceslimit;
     public int Count=0;
-    public int Timepeorid=120;
+    public int Timepeorid=240;
     void Start()
     {
         Basic=10;
