@@ -7,12 +7,15 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public GameObject root;
     public float speed;
+    public float originalspeed;
     public float HP;
+    public float damage;
     public ContactFilter2D filter;
     public List<Collider2D> results;
     void Start()
     {
-        speed=1f;
+        originalspeed=0.25f;
+        speed=originalspeed;
         HP=10f;
         filter = new ContactFilter2D().NoFilter();
         root=GameObject.Find("Roots/Root");
@@ -42,12 +45,12 @@ public class Enemy : MonoBehaviour
                 // float dis=Vector3.Distance((edge.start.transform.position+edge.end.transform.position)/2.0f,Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 // dis-=30f;
                Debug.Log(result.gameObject);
-               if(result.GetComponent<Edge>().HP>0.5f){
-                    result.GetComponent<Edge>().HP-=0.5f;
+               if(result.GetComponent<Edge>().HP>damage){
+                    result.GetComponent<Edge>().HP-=damage;
                     speed=0f;
                 }
                 else{
-                    speed=1f;        
+                    speed=originalspeed;        
                 }
             }else
             if(result.gameObject.TryGetComponent<bullet>(out bullet bul)){

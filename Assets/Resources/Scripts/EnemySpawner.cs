@@ -22,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
     public List<int> nodeLevels=new List<int>{5,20,30,100,200};
     public List<int> HPLevels=new List<int>{ 10, 15, 20,25,30,35};
     public List<int> NumberLevels=new List<int>{ 2, 4, 5,6,7,8};
+    public List<float> DamageLevels=new List<float>{ 0.5f, 1f, 2f,3f,4f,5f};
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +39,11 @@ public class EnemySpawner : MonoBehaviour
         int count=0;
         
         foreach(int i in nodeLevels){
-            count+=1;
-            if(GameObject.Find("Roots/Root").GetComponent<RootGrowup>().Total>i){
+            
+            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>i){
                 level=count;
             }
+            count+=1;
         }
         lowBound=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius+2f;
         while (GameObject.Find("Enemies").transform.childCount<3&&level<=5)
@@ -69,6 +71,7 @@ public class EnemySpawner : MonoBehaviour
                 //     {
                 GameObject obj = Instantiate(resourcePrefab, root.transform.position + new Vector3(x, y, 0), Quaternion.identity,GameObject.Find("/Enemies").transform) as GameObject;
                 obj.GetComponent<Enemy>().HP=HPLevels[level];
+                obj.GetComponent<Enemy>().damage=DamageLevels[level];
                     //}
                 //}
                 //GameObject obj = Instantiate(resorsePrefeb, roots.transform.position + new Vector3(x, y, 0), Quaternion.identity) as GameObject;

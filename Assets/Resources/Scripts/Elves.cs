@@ -84,7 +84,7 @@ public class Elves : MonoBehaviour
                 GameObject bulletIns = Instantiate(bullet, transform.position, Quaternion.identity,GameObject.Find("Bullets").transform);
                 Vector3 direction = (enemyTarget.transform.position - transform.position);
                 bullet bulletComp = bulletIns.GetComponent<bullet>();
-                bulletComp.targetPos = transform.position + direction.normalized * 1000.0f;
+                bulletComp.target = enemyTarget;
                 //bulletComp.speed = 1;
             }
             else

@@ -43,7 +43,7 @@ public class SpawnBehavior : MonoBehaviour
         
         foreach(int i in nodeLevels){
             count+=1;
-            if(GameObject.Find("Roots/Root").GetComponent<RootGrowup>().Total>i){
+            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>i){
                 level=count;
             }
         }
