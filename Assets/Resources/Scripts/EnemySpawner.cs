@@ -19,10 +19,12 @@ public class EnemySpawner : MonoBehaviour
     private float resourceBlockLength = 0;
     //public float originalHP;
     public int level;
-    public List<int> nodeLevels=new List<int>{5,10,15,20,25,30,40,50};
-    public List<int> HPLevels=new List<int>{ 10, 10, 10,10,10,10,10,10,10};
-    public List<int> NumberLevels=new List<int>{ 2, 4, 8,15,25,30,36,40,50};
-    public List<float> DamageLevels=new List<float>{ 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f , 0.5f , 0.5f };
+    public List<int> nodeLevels;
+    public List<int> HPLevels;
+    public List<int> NumberLevels;
+    public List<float> DamageLevels;
+    public Vector2 Debug;
+    public int count;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,23 +32,28 @@ public class EnemySpawner : MonoBehaviour
         highBound = 4*spawnGap;
         resourceBlockLength = resourcePrefab.transform.localScale.x;
         level=0;
+        nodeLevels=new List<int>{5,10,15,20,25,30,40,50};
+        HPLevels=new List<int>{ 10, 10, 10,10,10,10,10,10,10};
+        NumberLevels=new List<int>{ 2, 4, 8,15,25,30,36,40,50};
+        DamageLevels=new List<float>{ 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f , 0.5f , 0.5f };
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        int count=0;
+        count=0;
         
-        foreach(int i in nodeLevels){
+        for (int count =0; count<nodeLevels.Count;count++){
             
-            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>i){
+            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>nodeLevels[count]){
+                Debug=new Vector2(GameObject.Find("Roots").GetComponent<RootGrowup>().Total,count);
                 level=count;
             }
-            count+=1;
+            
         }
         lowBound=GameObject.Find("Roots/Light 2D").GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius+2f;
-        while (GameObject.Find("Enemies").transform.childCount<3&&level<=5)
+        while (GameObject.Find("Enemies").transform.childCount<3)
         {
             // spawn n obj per hollow
             numPerSpawn=NumberLevels[level];
