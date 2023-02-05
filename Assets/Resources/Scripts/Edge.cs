@@ -43,7 +43,7 @@ public class Edge : MonoBehaviour
 
         Light2D=transform.GetChild(1).GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         Light2D.intensity = guidline/5f;
-        GetComponent<SpriteRenderer>().color=new Color(col.r,col.g-HP/255f,col.b-HP/255f,1f);
+        GetComponent<SpriteRenderer>().color=new Color(col.r,col.g-(255-HP)/255f,col.b-(255-HP)/255f,1f);
         if(HP<255f){
             HP+=0.1f;
         }
