@@ -44,7 +44,7 @@ public class MouseInput : MonoBehaviour
                         //     return;
                         // }
                         GameObject Roots=root.transform.parent.gameObject;
-                        if(Roots.GetComponent<RootGrowup>().resourcesCount>=elfPrize){
+                        if(Roots.GetComponent<RootGrowup>().resourcesCount>=elfPrize&&(GameObject.Find("Elves").transform.childCount)< GameObject.Find("Roots").GetComponent<RootGrowup>().Total){
                             GameObject Elves=GameObject.Find("/Roots/Elves");
                             Roots.GetComponent<RootGrowup>().resourcesCount-=elfPrize;
                             GameObject obj=Instantiate(elf, transform.position, Quaternion.identity,Elves.transform) as GameObject;

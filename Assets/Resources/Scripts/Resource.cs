@@ -26,8 +26,9 @@ public class Resource : MonoBehaviour
             if(dis<0.01f&&target!=root){
                 target=target.transform.parent.gameObject.GetComponent<Edge>().start;
 
-            }
+            }else
             if(dis<0.01f&&target==root){
+                root.transform.parent.gameObject.GetComponent<RootGrowup>().resourcesCount+=1;
                 Destroy(gameObject);
             }
         }else{
