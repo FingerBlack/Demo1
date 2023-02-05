@@ -120,12 +120,12 @@ TextureImporter:
       name: wind_stoneS_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 10
-        width: 107
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 85
+        width: 112
+        height: 339
+      alignment: 9
+      pivot: {x: 0.37730816, y: 0.099821806}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
