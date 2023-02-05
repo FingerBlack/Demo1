@@ -26,6 +26,7 @@ public class SpawnBehavior : MonoBehaviour
     public List<int> resourceLimit=new List<int>{ 10000, 50000, 80000,200000,300000,600000};
     public float TimePeirod;
     public float TimeCount;
+    public int ResourceTotal;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,7 @@ public class SpawnBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ResourceTotal=GameObject.Find("Resources").transform.childCount;
         TimeCount+=Time.deltaTime;
         for(int i=0;i<nodeLevels.Count ;i++){
             
@@ -58,7 +59,7 @@ public class SpawnBehavior : MonoBehaviour
             TimeCount=0f;
             //GameObject.Find("Roots").GetComponent<RootGrowup>().resourcesCount+=20;
             numPerSpawn=numberLevels[level];
-            minBlockPerSide=sizeLevels[level];
+            minBlockPerSide=2*sizeLevels[level];
             int n=numPerSpawn;
             while (n > 0)
             {
@@ -98,7 +99,7 @@ public class SpawnBehavior : MonoBehaviour
             // enlarge hollow
             
             //level+=1;
-            minBlockPerSide=numberLevels[level]*3;
+            //minBlockPerSide=numberLevels[level]*3;
 
 
         }
