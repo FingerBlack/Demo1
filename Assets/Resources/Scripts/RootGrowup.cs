@@ -14,6 +14,8 @@ public class RootGrowup : MonoBehaviour
     public Vector3 originalElvesScale;
     public Vector3 originalScale;
     public int  resourceslimit;
+    public int Count=0;
+    public int Timepeorid=120;
     void Start()
     {
         Basic=10;
@@ -32,6 +34,11 @@ public class RootGrowup : MonoBehaviour
     {    
 
         //TimeCount=0;
+        Count++;
+
+        if((Count%Timepeorid)==0){
+            resourcesCount++;
+        }
         float scale=(Basic+Total*0.2f)/originalToal;
         foreach (Transform cld in GameObject.Find("Roots/Elves").transform)
         {

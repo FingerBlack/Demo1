@@ -23,7 +23,7 @@ public class SpawnBehavior : MonoBehaviour
     public List<int> sizeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> rangeLevels=new List<int>{ 2, 4, 5,6,7,8};
     public List<int> rangeSizeLevels=new List<int>{ 2, 4, 5,6,7,8};
-    public List<int> resourceLimit=new List<int>{ 1000, 5000, 8000,20000,30000,60000};
+    public List<int> resourceLimit=new List<int>{ 10000, 50000, 80000,200000,300000,600000};
     public float TimePeirod;
     public float TimeCount;
     // Start is called before the first frame update
@@ -56,7 +56,7 @@ public class SpawnBehavior : MonoBehaviour
         {
             // spawn n obj per hollow
             TimeCount=0f;
-            GameObject.Find("Roots").GetComponent<RootGrowup>().resourcesCount+=20;
+            //GameObject.Find("Roots").GetComponent<RootGrowup>().resourcesCount+=20;
             numPerSpawn=numberLevels[level];
             minBlockPerSide=sizeLevels[level];
             int n=numPerSpawn;

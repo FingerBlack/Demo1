@@ -12,6 +12,7 @@ public class Node : MonoBehaviour
     public List<int> roots = new List<int>{ -60, 0, 60,120,-120,180};
     public List<int> Level = new List<int>{ 0, 3, 9,27,81,243,729,2187,6561,19683};
     public int timeCount=0;
+    public int NodePrize=20;
     //public Dictionary<GameObject, float> posibility = new Dictionary<GameObject, float>();
     // Start is called before the first frame update
     void Start()
@@ -68,8 +69,8 @@ public class Node : MonoBehaviour
             if(roots.Count>0){
                 if(gameObject!=GameObject.Find("Roots/Root")){
 
-                    if(resources.resourcesCount>10){
-                        resources.resourcesCount-=10;
+                    if(resources.resourcesCount>NodePrize){
+                        resources.resourcesCount-=NodePrize;
                     }else{
                         return;
                     }
