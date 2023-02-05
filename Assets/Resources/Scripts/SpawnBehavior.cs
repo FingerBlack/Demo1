@@ -31,7 +31,12 @@ public class SpawnBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        nodeLevels=new List<int>{20,30,50,100,200};
+        numberLevels=new List<int>{ 10, 10, 10,10,10,10};
+        sizeLevels=new List<int>{ 3, 3, 3,3,3,3};
+        rangeLevels=new List<int>{ 2, 4, 5,6,7,8};
+        rangeSizeLevels=new List<int>{ 2, 3, 4,6,8,9};
+        resourceLimit=new List<int>{ 1000, 5000, 8000,20000,30000,60000};
         spawnGap = 2f;
 
         TimePeirod=10f;

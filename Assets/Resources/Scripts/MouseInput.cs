@@ -20,7 +20,7 @@ public class MouseInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        elfPrize=GameObject.Find("Roots").GetComponent<RootGrowup>().Total;
+        elfPrize=5;
         if (Input.GetMouseButtonDown(0))
         {
             //Vector3 screenPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
