@@ -15,7 +15,7 @@ public class ElfPrize : MonoBehaviour
     void Update()
     {
         m_TextComponent = GetComponent<TMP_Text>();
-        string txt="Prize: 5";
+        string txt="Price: 5";
         m_TextComponent.text=txt;
     }
 }

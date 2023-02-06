@@ -23,7 +23,7 @@ public class Node : MonoBehaviour
         if(Neighbors.Count==0){
             roots =new List<int>{ -30, 30, 90,150,-90,-150};
         }else{
-            roots =new List<int>{ -30, 30, 90,150,-90};
+            roots =new List<int>{ 0, 60, 120,-60,-120};
         }
         //Debug.Log(transform.parent);
         total=0f;

@@ -15,7 +15,7 @@ public class NodePrize : MonoBehaviour
     void Update()
     {
         m_TextComponent = GetComponent<TMP_Text>();
-        string txt="Prize: "+GameObject.Find("Roots/Root").GetComponent<Node>().NodePrize.ToString("#.00");
+        string txt="Price: "+GameObject.Find("Roots/Root").GetComponent<Node>().NodePrize.ToString("#.00");
         m_TextComponent.text=txt;
     }
 }
