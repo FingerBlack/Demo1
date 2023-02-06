@@ -18,13 +18,13 @@ public class Overall : MonoBehaviour
     {   
 
         if(ifstart){
-            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>=100){
+            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>=200){
                 ifstart=false;
                 GameObject.Find("PageControl").GetComponent<PageControl>().ValueDisplay.SetActive(false);
                 GameObject.Find("PageControl").GetComponent<PageControl>().Page6.SetActive(true);
         //GameObject.Find("PageControl").GetComponent<PageControl>().Page7.SetActive(true);
             }
-            if(GameObject.Find("Roots").GetComponent<RootGrowup>().HP<0){
+            if(GameObject.Find("Roots").GetComponent<RootGrowup>().HP<0 ||GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().TimeCount>600){
                 ifstart=false;
                 GameObject.Find("PageControl").GetComponent<PageControl>().ValueDisplay.SetActive(false);
                 GameObject.Find("PageControl").GetComponent<PageControl>().Page7.SetActive(true);

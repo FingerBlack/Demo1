@@ -43,7 +43,7 @@ public class Resource : MonoBehaviour
             }
             ContactFilter2D filter = new ContactFilter2D().NoFilter();
             List<Collider2D> results = new List<Collider2D>();
-            Physics2D.OverlapCircle(transform.position, 0.01f,filter,results);
+            Physics2D.OverlapCircle(transform.position, 0.5f,filter,results);
             //Debug.Log(Input.mousePosition);
             //bool flag=false;
 

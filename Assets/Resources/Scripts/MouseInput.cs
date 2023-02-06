@@ -8,7 +8,7 @@ public class MouseInput : MonoBehaviour
     // public float a;
     
     // public float c;
-    public GameObject elf;
+    public List<GameObject> elves;
     public int elfPrize=5;
     //int[] b = new int[]{ 60,120 };
     // Start is called before the first frame update
@@ -51,7 +51,9 @@ public class MouseInput : MonoBehaviour
                         if(Roots.GetComponent<RootGrowup>().resourcesCount>=elfPrize&&(GameObject.Find("Elves").transform.childCount)< GameObject.Find("Roots").GetComponent<RootGrowup>().Total){
                             GameObject Elves=GameObject.Find("/Roots/Elves");
                             Roots.GetComponent<RootGrowup>().resourcesCount-=elfPrize;
-                            GameObject obj=Instantiate(elf, transform.position, Quaternion.identity,Elves.transform) as GameObject;
+                            int element=Random.Range(0,3);
+
+                            GameObject obj=Instantiate(elves[element], transform.position, Quaternion.identity,Elves.transform) as GameObject;
                             obj.transform.position=new Vector3(0f,0f,0f);
                             obj.GetComponent<Elves>().target=GameObject.Find("Roots/Root");
                         }

@@ -40,7 +40,7 @@ public class SpawnBehavior : MonoBehaviour
         spawnGap = 2f;
 
         TimePeirod=10f;
-        TimeCount=0f;
+        TimeCount=10f;
         resourceBlockLength = resourcePrefab.transform.localScale.x;
         level=0;
     }

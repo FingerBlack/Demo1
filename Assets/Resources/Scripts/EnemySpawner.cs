@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public GameObject resourcePrefab;
+    public List<GameObject> resourcePrefab;
     public GameObject root;
     public float spawnRange = 10f;
     public float spawnGap;
@@ -16,10 +16,10 @@ public class EnemySpawner : MonoBehaviour
 
     private float lowBound ;
     private float highBound ;
-    private float resourceBlockLength = 0;
+    //private float resourceBlockLength = 0;
     //public float originalHP;
     public int level;
-    public List<int> nodeLevels;
+    public List<float> nodeLevels;
     public List<int> HPLevels;
     public List<int> NumberLevels;
     public List<float> DamageLevels;
@@ -28,14 +28,15 @@ public class EnemySpawner : MonoBehaviour
     public float angle;
     public float x;
     public float y;
+    public float TimeCount=0f;
     // Start is called before the first frame update
     void Start()
     {
         spawnGap = 2f;
-        resourceBlockLength = resourcePrefab.transform.localScale.x;
+        //resourceBlockLength = 0.1f;
         level=0;
-        nodeLevels=new List<int>{5,10,15,20,25,30,40,50,60,70,80,90,100};
-        HPLevels=new List<int>{ 100, 100, 125,150,170,250,300,300,400,400,550,550,600,600};
+        nodeLevels=new List<float>{5f,10f,15f,20f,25f,30f,40f,50f,60f,70f,80f,90f,100f};
+        HPLevels=new List<int>{ 100, 100, 125,150,170,170,170,170,170,170,200,200,250,300};
         NumberLevels=new List<int>{ 4, 8, 16,25,32,38,42,48,55,63,72,84,96,100};
         DamageLevels=new List<float>{ 0.3f, 0.3f, 0.3f, 0.3f, 0.3f, 0.3f, 0.3f , 0.3f , 0.3f, 0.3f, 0.3f, 0.3f, 0.3f, 0.3f };
     }
@@ -43,15 +44,17 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if(!GameObject.Find("OverAll").GetComponent<Overall>().ifstart){
             return;
         }
         count=0;
-        
+        TimeCount+=Time.deltaTime;
         for (int count =0; count<nodeLevels.Count;count++){
             
-            if(GameObject.Find("Roots").GetComponent<RootGrowup>().Total>nodeLevels[count]){
-                Debug=new Vector2(GameObject.Find("Roots").GetComponent<RootGrowup>().Total,count);
+            if(TimeCount>nodeLevels[count]*10f){
+                //Debug=new Vector2(GameObject.Find("Roots").GetComponent<RootGrowup>().Total,count);
                 level=count;
             }
             
@@ -85,7 +88,8 @@ public class EnemySpawner : MonoBehaviour
                 //     for (int j = 0; j < minBlockPerResource");
                 // for(int i = 0; i < minBlockPerSide; iSide; j++)
                 //     {
-                GameObject obj = Instantiate(resourcePrefab, root.transform.position + new Vector3(x, y, 0), Quaternion.identity,GameObject.Find("/Enemies").transform) as GameObject;
+                int element=Random.Range(0,3);
+                GameObject obj = Instantiate(resourcePrefab[element], root.transform.position + new Vector3(x, y, 0), Quaternion.identity,GameObject.Find("/Enemies").transform) as GameObject;
                 obj.GetComponent<Enemy>().HP=HPLevels[level];
                 obj.GetComponent<Enemy>().damage=DamageLevels[level];
                     //}

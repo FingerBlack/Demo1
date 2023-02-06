@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         originalspeed=0.6f;
         //TimeCount=0;
         speed=originalspeed;
-        HP=10f;
+        //HP=10f;
         filter = new ContactFilter2D().NoFilter();
         root=GameObject.Find("Roots/Root");
         roots=GameObject.Find("Roots");
