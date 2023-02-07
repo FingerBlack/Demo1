@@ -1,4 +1,4 @@
-#May's Soul Journey
+# May's Soul Journey(fot GGJ2023)
 "May's Soul Journey" is a defense game that takes you on a journey through the heart of a young girl named May. As she battles depression, you must help her grow and protect a symbolic tree that represents her innermost feelings.
 
 You will have to use your strategic skills to grow the tree's roots and defend it against menacing enemies that symbolize the negative feelings and thoughts that are holding May back. By summoning powerful elves to aid you in battle, you can push back the darkness and help May on her path to healing and growth.
