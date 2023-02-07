@@ -20,5 +20,3 @@ Resource Credits:
 Music by [geoffharvey](https://pixabay.com/users/geoffharvey-9096471/?utm_source=link-attributi)  from https://pixabay.com/music//?utm_source=link-attribution&utm_medium=r
 
 Grass Tile by Ulrick Wery from https://www.artstation.com/artwork/Gv1yN
-
-Like Reply Edit Delete
