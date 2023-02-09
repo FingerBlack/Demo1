@@ -19,6 +19,6 @@ public class NextPage : MonoBehaviour
     }
     void OnClick(){
         GameObject.Find("PageControl").GetComponent<PageControl>().HomePage.SetActive(false);
-        GameObject.Find("PageControl").GetComponent<PageControl>().Page1.SetActive(true);
+        GameObject.Find("PageControl").GetComponent<PageControl>().Page0.SetActive(true);
     }
 }
