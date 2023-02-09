@@ -9,7 +9,7 @@ public class Overall : MonoBehaviour
     void Start()
     {
         ifstart=false;
-        Screen.SetResolution(1920,1080,false);
+        //Screen.SetResolution(1920,1080,false);
 
     }
 
